@@ -13,7 +13,7 @@ NGINX_ENABLE="${NGINX_ENABLE:-0}"
 # 建立 VPN 连接
 connect_vpn() {
     # 建立连接
-    openvpn --config /etc/openvpn/client/client.ovpn --auth-user-pass /etc/openvpn/client/user-passwd.txt &
+    openvpn --config /etc/openvpn/client/client.opvn --auth-user-pass /etc/openvpn/client/user-passwd.txt &
 }
 
 # 路由表
