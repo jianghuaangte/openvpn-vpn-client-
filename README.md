@@ -51,3 +51,11 @@ services:
 push "redirect-gateway def1"
 push "dhcp-option DNS 8.8.8.8"
 ```
+
+路由（可选），如果流量没有走全局VPN（一般是自动配置好的），可以设置如下：
+- 10.7.7.1 指 VPN 网关
+- tunx 指网络接口
+```shell
+ip route add 128.0.0.0/1 via 10.7.7.1 dev tunx
+ip route add 0.0.0.0/1 via 10.7.7.1 dev tunx
+```
