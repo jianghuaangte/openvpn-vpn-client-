@@ -39,7 +39,7 @@ services:
     volumes:
        - "/lib/modules:/lib/modules:ro"
        - "/path/to/dir:/etc/openvpn/client"    # 配置文件及用户/密码
- #      - "./nginx/conf.d:/etc/nginx/conf.d"   # 设置为1则启用 Nginx
+ #      - "./nginx/conf.d:/etc/nginx/conf.d"   # Nginx 配置文件（可选）
     networks:
       vpn-network:
         ipv4_address: 172.20.0.10
