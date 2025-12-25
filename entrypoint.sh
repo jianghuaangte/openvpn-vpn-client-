@@ -32,6 +32,8 @@ main() {
     connect_vpn
     # Nginx
     start_nginx_if_enabled
+    # Socat
+    start_socat_if_enabled
     # 保持容器运行
     tail -f /dev/null
 }
